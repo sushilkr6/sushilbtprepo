@@ -1,6 +1,16 @@
-<mvc:View controllerName="skbtp1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="skbtp1.controller.View1">
     <Page id="page" title="{i18n>title}">
+    <headerContent>
+        <Button xmlns="sap.m" text="Button" id="button0"/>
+    </headerContent>
+    <content>
+        <Link xmlns="sap.m" href="https://ui5.sap.com" text="Test BTP SK" id="link2"/><sap.ui.vbm:GeoMap xmlns:sap.ui.vbm="sap.ui.vbm" id="map1"/>
+        <DatePicker xmlns="sap.m" id="picker0"/>
+        <App id="app0">
+            <pages>
+                <Page title="Page 1" id="page0"/>
+                <Page title="Page 2" id="page1"/></pages>
+        </App>
+    </content>
     </Page>
 </mvc:View>
