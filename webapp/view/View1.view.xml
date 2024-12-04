@@ -1,16 +1,24 @@
-<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="skbtp1.controller.View1">
-    <Page id="page" title="{i18n>title}">
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="skbtp1.controller.View1"><Page id="page" title="{i18n>title}">
     <headerContent>
+        <sap.ushell.ui.footerbar:AddBookmarkButton text="Bookmark" icon="sap-icon://add-favorite" xmlns:sap.ushell.ui.footerbar="sap.ushell.ui.footerbar" id="button0_1733294731018"/>
         <Button xmlns="sap.m" text="Button" id="button0"/>
     </headerContent>
     <content>
-        <Link xmlns="sap.m" href="https://ui5.sap.com" text="Test BTP SK" id="link2"/><sap.ui.vbm:GeoMap xmlns:sap.ui.vbm="sap.ui.vbm" id="map1"/>
+        <Link xmlns="sap.m" href="https://ui5.sap.com" text="Test BTP SK" id="link2"/><UploadCollection noDataText="No files found." noDataDescription="Drop files to upload, or use the &quot;+&quot; button." id="collection0">
+            <items>
+                <UploadCollectionItem contributor="Contributor1" fileName="fileName1" uploadedDate="Wed Dec 04 2024" id="item0"/>
+                <UploadCollectionItem contributor="Contributor1" fileName="fileName2" uploadedDate="Wed Dec 04 2024" id="item1"/>
+                <UploadCollectionItem contributor="Contributor1" fileName="fileName3" uploadedDate="Wed Dec 04 2024" id="item2"/></items>
+        </UploadCollection>
+        <PullToRefresh id="refresh0"/>
         <DatePicker xmlns="sap.m" id="picker0"/>
-        <App id="app0">
-            <pages>
-                <Page title="Page 1" id="page0"/>
-                <Page title="Page 2" id="page1"/></pages>
-        </App>
+        <StandardTile title="SK_APP" info="Info" icon="sap-icon://customer" activeIcon="sap-icon://customer" number="123" numberUnit="INR" infoState="Success" id="tile2"/>
+        <TileContainer editable="true" allowAdd="true" id="container2">
+            <tiles>
+                <StandardTile title="content1" info="Info" icon="sap-icon://customer" activeIcon="sap-icon://customer" number="123" numberUnit="INR" infoState="Success" id="tile8"/>
+                <StandardTile title="content2" info="Info" icon="sap-icon://customer" activeIcon="sap-icon://customer" number="123" numberUnit="eur" infoState="Success" id="tile9"/></tiles>
+        </TileContainer>
+        <ActionSelect id="select1"/>
     </content>
     </Page>
 </mvc:View>
